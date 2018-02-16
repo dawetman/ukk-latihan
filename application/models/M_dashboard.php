@@ -1,31 +1,31 @@
 <?php 
 
-class M_user extends CI_Model{
+class M_dashboard extends CI_Model{
 
 	// DETAIL USER
 
-	function tampil_detail_user()
+	function tampil_detail_pelanggan()
 	{
 		return $this->db->get('pelanggan');
 	}
 
-	function tambah_detail_user($data, $pelanggan)
+	function tambah_detail_pelanggan($data, $pelanggan)
 	{
 		$this->db->insert('pelanggan', $data);
 	}
 
-	function hapus_detail_user($where, $pelanggan)
+	function hapus_detail_pelanggan($where, $pelanggan)
 	{
 		$this->db->where($where);
 		$this->db->delete('pelanggan');
 	}
 
-	function edit_detail_user($where, $pelanggan)
+	function edit_detail_pelanggan($where, $pelanggan)
 	{
 		return $this->db->get_where('pelanggan', $where);
 	}
 
-	function update_detail_user($where, $data, $pelanggan)
+	function update_detail_pelanggan($where, $data, $pelanggan)
 	{
 		$this->db->where($where);
 		$this->db->update('pelanggan', $data);
@@ -33,28 +33,28 @@ class M_user extends CI_Model{
 
 	// DATA USER
 
-	function tampil_data_user()
+	function tampil_data_pelanggan()
 	{
 		return $this->db->get('user');
 	}
 
-	function tambah_data_user($data, $user)
+	function tambah_data_pelanggan($data, $user)
 	{
 		$this->db->insert('user', $data);
 	}
 
-	function hapus_data_user($where, $user)
+	function hapus_data_pelanggan($where, $user)
 	{
 		$this->db->where($where);
 		$this->db->delete('user');
 	}
 
-	function edit_data_user($where, $user)
+	function edit_data_pelanggan($where, $user)
 	{
 		return $this->db->get_where('user', $where);
 	}
 
-	function update_data_user($where, $data, $user)
+	function update_data_pelanggan($where, $data, $user)
 	{
 		$this->db->where($where);
 		$this->db->update('user', $data);
@@ -116,6 +116,42 @@ class M_user extends CI_Model{
 	{
 		$this->db->where($where);
 		$this->db->update('pesawat', $data);
+	}
+
+	// DATA PESAWAT
+
+	function tampil_rute_maskapai()
+	{
+		return $this->db->get('rute');
+	}
+
+	function tambah_rute_maskapai($data, $rute)
+	{
+		$this->db->insert('rute', $data);
+	}
+
+	function hapus_rute_maskapai($where, $rute)
+	{
+		$this->db->where($where);
+		$this->db->delete('rute');
+	}
+
+	function edit_rute_maskapai($where, $rute)
+	{
+		return $this->db->get_where('rute', $where);
+	}
+
+	function update_rute_maskapai($where, $data, $rute)
+	{
+		$this->db->where($where);
+		$this->db->update('rute', $data);
+	}
+
+	// DETAIL USER
+
+	function tampil_detail_user()
+	{
+		return $this->db->get('pelanggan');
 	}
 
 }

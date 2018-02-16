@@ -15,5 +15,5 @@ class Home extends CI_Controller {
 		$this->load->view('home/index');
 		$this->load->view('home/template/footer');
 	}
-	
+		
 }

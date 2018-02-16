@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
-      Tambah Data Maskapai
+      Edit Data
     </h1>
   </section>
 
@@ -9,40 +9,43 @@
     <div class="col-md-12">
       <div class="box">
 
-        <form role="form" action="<?php echo base_url() ?>Dashboard/tambah_data_maskapai" method="POST">
+        <?php foreach($user as $u) { ?>
+        <form role="form" action="<?php echo base_url() ?>Dashboard/edit_data_pelanggan" method="POST">
           <div class="box-body">
+            <input type="hidden" name="id" value="<?php echo $u->id ?>">
             <div class="form-group">
-              <label>Nama Maskapai</label>
+              <label>Email</label>
               <div class="input-group">
                 <span class="input-group-addon">
-                  <i class="fa fa-plane"></i>
+                  <i class="fa fa-envelope"></i>
                 </span>
-                <input class="form-control" name="name" type="text" placeholder="Nama Maskapai">
+                <input class="form-control" name="email" type="text" value="<?php echo $u->email ?>">
               </div>
             </div>
             <div class="form-group">
-              <label>Kursi</label>
+              <label>Username</label>
               <div class="input-group">
                 <span class="input-group-addon">
-                  <i class="fa fa-wheelchair"></i>
+                  <i class="fa fa-user"></i>
                 </span>
-                <input class="form-control" name="seat" type="text" placeholder="Kursi">
+                <input class="form-control" name="username" type="text" value="<?php echo $u->username ?>">
               </div>
             </div>
             <div class="form-group">
-              <label>Detail</label>
+              <label>Password</label>
               <div class="input-group">
                 <span class="input-group-addon">
-                  <i class="fa fa-asterisk"></i>
+                  <i class="fa fa-key"></i>
                 </span>
-                <input class="form-control" name="detail" type="text" placeholder="Detail">
+                <input class="form-control" name="password" type="password" value="<?php echo $u->password ?>">
               </div>
             </div>
             <div class="box-footer">
-              <button type="submit" class="btn bg-gray">Submit</button>
+              <button type="submit" class="btn bg-gray">Simpan</button>
             </div>
           </div>
         </form>
+        <?php } ?>
 
       </div>
     </div>

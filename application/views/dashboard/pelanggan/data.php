@@ -7,7 +7,7 @@
 
   <section class="content">
     <div class="col-xs-12">
-      <div class="box box-primary">
+      <div class="box">
 
         <div class="box-header">
           <h3 class="box-title">Data User</h3>
@@ -35,10 +35,10 @@
               <td class="col col-md-3"><?php echo $u->username ?></td>
               <td class="col col-md-2"><?php echo $u->password ?></td>
               <td class="col col-md-1">
-                <a href="<?php echo base_url('User/v_edit_data_user/').$u->id;?>">
+                <a href="<?php echo base_url('Dashboard/v_edit_data_pelanggan/').$u->id;?>">
                   <button class="btn btn-xs btn-warning">Edit</button>
                 </a>
-                <a href="<?php echo base_url('User/hapus_data_user/').$u->id;?>">
+                <a href="<?php echo base_url('Dashboard/hapus_data_pelanggan/').$u->id;?>">
                   <button class="btn btn-xs btn-danger">Hapus</button></a>
                 </td>
               </tr>
@@ -47,7 +47,7 @@
           </table>
         </div>
         <div class="box-footer">
-          <a href="<?php echo base_url() ?>User/v_tambah_data_user"><button href="<?php echo base_url() ?>User/v_tambah" class="btn btn-primary pull-right">Tambah Data</button></a>
+          <a href="<?php echo base_url() ?>Dashboard/v_tambah_data_pelanggan"><button class="btn bg-gray pull-right">Tambah Data</button></a>
         </div>
 
       </div>
