@@ -6,45 +6,43 @@
   </section>
 
   <section class="content">
-    <div class="col-md-12">
-      <div class="box">
+    <div class="box">
 
-        <form role="form" action="<?php echo base_url() ?>Dashboard/tambah_data_pelanggan" method="POST">
-          <div class="box-body">
-            <div class="form-group">
-              <label>Email</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-envelope"></i>
-                </span>
-                <input class="form-control" name="email" type="text" placeholder="Email">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Username</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-user"></i>
-                </span>
-                <input class="form-control" name="username" type="text" placeholder="Username">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-key"></i>
-                </span>
-                <input class="form-control" name="password" type="password" placeholder="Password">
-              </div>
-            </div>
-            <div class="box-footer">
-              <button type="submit" class="btn bg-gray">Submit</button>
+      <form role="form" action="<?php echo base_url() ?>Dashboard/tambah_data_pelanggan" method="POST">
+        <div class="box-body">
+          <div class="form-group">
+            <label>Email</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <input class="form-control" name="email" type="text" placeholder="Email">
             </div>
           </div>
-        </form>
+          <div class="form-group">
+            <label>Username</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </span>
+              <input class="form-control" name="username" type="text" placeholder="Username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-key"></i>
+              </span>
+              <input class="form-control" name="password" type="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn bg-gray">Submit</button>
+          </div>
+        </div>
+      </form>
 
-      </div>
     </div>
   </section>
 </div>

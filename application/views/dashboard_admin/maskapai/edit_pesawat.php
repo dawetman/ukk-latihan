@@ -6,48 +6,46 @@
   </section>
 
   <section class="content">
-    <div class="col-md-12">
-      <div class="box">
+    <div class="box">
 
-        <?php foreach($pesawat as $p) { ?>
-        <form role="form" action="<?php echo base_url() ?>Dashboard/edit_data_pesawat" method="POST">
-          <div class="box-body">
-            <input type="hidden" name="id" value="<?php echo $p->id ?>">
-            <div class="form-group">
-              <label>Kode Pesawat</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-code"></i>
-                </span>
-                <input class="form-control" name="code" type="text" value="<?php echo $p->code ?>">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Nama Pesawat</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-plane"></i>
-                </span>
-                <input class="form-control" name="name" type="text" value="<?php echo $p->name ?>">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Detail</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-asterisk"></i>
-                </span>
-                <input class="form-control" name="detail" type="text" value="<?php echo $p->detail ?>">
-              </div>
-            </div>
-            <div class="box-footer">
-              <button type="submit" class="btn bg-gray">Simpan</button>
+      <?php foreach($pesawat as $p) { ?>
+      <form role="form" action="<?php echo base_url() ?>Dashboard/edit_data_pesawat" method="POST">
+        <div class="box-body">
+          <input type="hidden" name="id_pesawat" value="<?php echo $p->id_pesawat ?>">
+          <div class="form-group">
+            <label>Kode Pesawat</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-code"></i>
+              </span>
+              <input class="form-control" name="code" type="text" value="<?php echo $p->code ?>">
             </div>
           </div>
-        </form>
-        <?php } ?>
+          <div class="form-group">
+            <label>Nama Pesawat</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-plane"></i>
+              </span>
+              <input class="form-control" name="name" type="text" value="<?php echo $p->name ?>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Detail</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-asterisk"></i>
+              </span>
+              <input class="form-control" name="detail" type="text" value="<?php echo $p->detail ?>">
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn bg-gray">Simpan</button>
+          </div>
+        </div>
+      </form>
+      <?php } ?>
 
-      </div>
     </div>
   </section>
 </div>

@@ -1,5 +1,5 @@
 /*
- * Title:   Travelo | Responsive HTML5 Travel Template - Main CSS file
+ * Title:   jalanyuk | Responsive HTML5 Travel Template - Main CSS file
  * Author:  http://themeforest.net/user/soaptheme
  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,7 +28,7 @@
     2.2.11. Price section
     2.2.12. Time section
     2.2.13. Badge
-  2.3. Travelo Elements
+  2.3. jalanyuk Elements
   2.4. Skin Color
   2.5. Positioning
   2.6. Unordered lists
@@ -111,7 +111,7 @@
     9.2.3. Blog page
     9.2.4. Faq page
     9.2.5. Contact us page
-    9.2.6. Travelo polices page
+    9.2.6. jalanyuk polices page
     9.2.7. Sitemap page
   9.3. Special Pages
     9.3.1. 404 page
@@ -2155,7 +2155,7 @@ blockquote {
   .badge-container img {
     margin: 0 !important; }
 
-/* 2.3. Travelo Elements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 2.3. jalanyuk Elements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .suggestions.image-carousel.style2 .slides > li {
   margin-right: 24px; }
   .suggestions.image-carousel.style2 .slides > li img {
@@ -2166,30 +2166,30 @@ blockquote {
   text-align: center;
   margin-bottom: 0; }
 
-.travelo-box {
+.jalanyuk-box {
   background: #fff;
   padding: 20px;
   margin-bottom: 30px; }
-  .travelo-box > *:last-child {
+  .jalanyuk-box > *:last-child {
     margin-bottom: 0; }
-  .travelo-box .title {
+  .jalanyuk-box .title {
     margin-bottom: 5px; }
-  .travelo-box .box-title {
+  .jalanyuk-box .box-title {
     margin-bottom: 15px; }
-  .travelo-box.box-full {
+  .jalanyuk-box.box-full {
     padding: 30px; }
-  .travelo-box.search-stories-box button {
+  .jalanyuk-box.search-stories-box button {
     height: 34px;
     /*margin: 0 !important;*/
     padding: 0 10px;
     font-size: 1em; }
-  .travelo-box.twitter-box .twitter-holder > ul li {
+  .jalanyuk-box.twitter-box .twitter-holder > ul li {
     border-bottom: 1px solid #f5f5f5;
     padding: 15px 0 15px 40px;
     position: relative; }
-    .travelo-box.twitter-box .twitter-holder > ul li:last-child {
+    .jalanyuk-box.twitter-box .twitter-holder > ul li:last-child {
       border: none; }
-    .travelo-box.twitter-box .twitter-holder > ul li:before {
+    .jalanyuk-box.twitter-box .twitter-holder > ul li:before {
       content: "\f099";
       font-family: FontAwesome;
       display: block;
@@ -2206,87 +2206,87 @@ blockquote {
       position: absolute;
       left: 0;
       font-size: 16px; }
-    .travelo-box.twitter-box .twitter-holder > ul li .tweet-text a {
+    .jalanyuk-box.twitter-box .twitter-holder > ul li .tweet-text a {
       color: #9f60b5; }
-      .travelo-box.twitter-box .twitter-holder > ul li .tweet-text a:hover {
+      .jalanyuk-box.twitter-box .twitter-holder > ul li .tweet-text a:hover {
         text-decoration: underline; }
-  .travelo-box.contact-box .contact-details {
+  .jalanyuk-box.contact-box .contact-details {
     margin: 0; }
-    .travelo-box.contact-box .contact-details .contact-phone {
+    .jalanyuk-box.contact-box .contact-details .contact-phone {
       color: #9f60b5; }
-      .travelo-box.contact-box .contact-details .contact-phone > i {
+      .jalanyuk-box.contact-box .contact-details .contact-phone > i {
         color: #ff3e3e; }
-    .travelo-box.contact-box .contact-details .contact-email {
+    .jalanyuk-box.contact-box .contact-details .contact-email {
       color: inherit; }
-  .travelo-box.book-with-us-box li, .travelo-box.contact-us-box .contact-address li {
+  .jalanyuk-box.book-with-us-box li, .jalanyuk-box.contact-us-box .contact-address li {
     border-bottom: 1px solid #f5f5f5;
     padding: 10px 0 10px 40px;
     position: relative; }
-    .travelo-box.book-with-us-box li > i, .travelo-box.contact-us-box .contact-address li > i {
+    .jalanyuk-box.book-with-us-box li > i, .jalanyuk-box.contact-us-box .contact-address li > i {
       position: absolute;
       font-size: 1.5em;
       color: #ff3e3e;
       left: 0;
       top: 12px; }
-    .travelo-box.book-with-us-box li:last-child, .travelo-box.contact-us-box .contact-address li:last-child {
+    .jalanyuk-box.book-with-us-box li:last-child, .jalanyuk-box.contact-us-box .contact-address li:last-child {
       border-bottom-width: 0;
       padding-bottom: 0; }
-    .travelo-box.book-with-us-box li .title, .travelo-box.contact-us-box .contact-address li .title {
+    .jalanyuk-box.book-with-us-box li .title, .jalanyuk-box.contact-us-box .contact-address li .title {
       color: #2d3e52; }
-    .travelo-box.book-with-us-box li:after, .travelo-box.contact-us-box .contact-address li:after {
+    .jalanyuk-box.book-with-us-box li:after, .jalanyuk-box.contact-us-box .contact-address li:after {
       display: table;
       clear: both;
       content: ""; }
-    .travelo-box.book-with-us-box li > *:last-child, .travelo-box.contact-us-box .contact-address li > *:last-child {
+    .jalanyuk-box.book-with-us-box li > *:last-child, .jalanyuk-box.contact-us-box .contact-address li > *:last-child {
       margin-bottom: 0; }
-  .travelo-box.contact-us-box .title {
+  .jalanyuk-box.contact-us-box .title {
     color: #2d3e52; }
-  .travelo-box.contact-us-box .contact-address {
+  .jalanyuk-box.contact-us-box .contact-address {
     margin-bottom: 25px; }
-    .travelo-box.contact-us-box .contact-address li {
+    .jalanyuk-box.contact-us-box .contact-address li {
       padding-left: 50px; }
-      .travelo-box.contact-us-box .contact-address li p {
+      .jalanyuk-box.contact-us-box .contact-address li p {
         font-size: 0.8333em;
         text-transform: uppercase;
         margin-bottom: 0; }
-      .travelo-box.contact-us-box .contact-address li:last-child {
+      .jalanyuk-box.contact-us-box .contact-address li:last-child {
         border-bottom-width: 1px;
         padding-bottom: 10px; }
-  .travelo-box.contact-us-box .social-icons a {
+  .jalanyuk-box.contact-us-box .social-icons a {
     overflow: hidden; }
-  .travelo-box.contact-us-box .social-icons a:hover i:before {
+  .jalanyuk-box.contact-us-box .social-icons a:hover i:before {
     -webkit-animation: toBottomFromTop 0.4s forwards;
     -moz-animation: toBottomFromTop 0.4s forwards;
     animation: toBottomFromTop 0.4s forwards; }
-  .travelo-box.newsletter-box {
+  .jalanyuk-box.newsletter-box {
     padding: 20px 30px; }
-    .travelo-box.newsletter-box button {
+    .jalanyuk-box.newsletter-box button {
       margin-right: 0 !important;
       margin-bottom: 0 !important; }
-    .travelo-box.newsletter-box .row > div {
+    .jalanyuk-box.newsletter-box .row > div {
       margin-bottom: 0 !important; }
-  .travelo-box.re-search-box label {
+  .jalanyuk-box.re-search-box label {
     font-size: 0.8333em;
     text-transform: uppercase;
     margin: 5px 0 0 0; }
-  .travelo-box.re-search-box button {
+  .jalanyuk-box.re-search-box button {
     text-transform: uppercase; }
-  .travelo-box.about-travelo-box .title {
+  .jalanyuk-box.about-jalanyuk-box .title {
     color: #9f60b5; }
-  .travelo-box.guarantee-box {
+  .jalanyuk-box.guarantee-box {
     text-align: center; }
-    .travelo-box.guarantee-box .guarantee-image {
+    .jalanyuk-box.guarantee-box .guarantee-image {
       display: block;
       margin: 0 auto 15px; }
-  .travelo-box.insurance-benefits ul {
+  .jalanyuk-box.insurance-benefits ul {
     font-size: 0.9167em; }
-    .travelo-box.insurance-benefits ul li {
+    .jalanyuk-box.insurance-benefits ul li {
       line-height: 3.6667em;
       border-bottom: 1px solid #f5f5f5;
       text-transform: uppercase; }
-      .travelo-box.insurance-benefits ul li:before {
+      .jalanyuk-box.insurance-benefits ul li:before {
         color: #d9d9d9; }
-    .travelo-box.insurance-benefits ul li.active:before, .travelo-box.insurance-benefits ul.hover li:hover:before {
+    .jalanyuk-box.insurance-benefits ul li.active:before, .jalanyuk-box.insurance-benefits ul.hover li:hover:before {
       color: #fdb714; }
 
 .contact-details {
@@ -2957,7 +2957,7 @@ ul.check-circle li:before {
     .photo-gallery .flex-direction-nav li a.flex-disabled, .image-carousel.style2 .flex-direction-nav li a.flex-disabled {
       background: #d9d9d9; }
 
-.travelo-box > .image-carousel.style2 .flex-direction-nav {
+.jalanyuk-box > .image-carousel.style2 .flex-direction-nav {
   top: -60px; }
 
 .photo-gallery {
@@ -6021,12 +6021,12 @@ ul.menu.mini {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo/skin10-logo.png', sizingMethod='scale')"; }
 
 /* 3.2.0. Sign up & Login box */
-.travelo-signup-box, .travelo-login-box {
+.jalanyuk-signup-box, .jalanyuk-login-box {
   border: 2px solid #9f60b5;
   width: 300px;
   margin: 0 auto;
   display: none; }
-  .travelo-signup-box .login-social .button, .travelo-login-box .login-social .button {
+  .jalanyuk-signup-box .login-social .button, .jalanyuk-login-box .login-social .button {
     width: 100%;
     height: 36px;
     line-height: 36px;
@@ -6036,23 +6036,23 @@ ul.menu.mini {
     text-align: left;
     padding-left: 20px;
     letter-spacing: 0.04em; }
-    .travelo-signup-box .login-social .button i, .travelo-login-box .login-social .button i {
+    .jalanyuk-signup-box .login-social .button i, .jalanyuk-login-box .login-social .button i {
       font-size: 1.5em;
       margin-right: 36px;
       width: 20px;
       float: left;
       display: block; }
-  .travelo-signup-box .login-facebook, .travelo-login-box .login-facebook {
+  .jalanyuk-signup-box .login-facebook, .jalanyuk-login-box .login-facebook {
     background: #155c92; }
-  .travelo-signup-box .login-googleplus, .travelo-login-box .login-googleplus {
+  .jalanyuk-signup-box .login-googleplus, .jalanyuk-login-box .login-googleplus {
     background: #d13535; }
-  .travelo-signup-box .seperator, .travelo-login-box .seperator {
+  .jalanyuk-signup-box .seperator, .jalanyuk-login-box .seperator {
     line-height: 0;
     border-top: 1px solid #f5f5f5;
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px; }
-    .travelo-signup-box .seperator label, .travelo-login-box .seperator label {
+    .jalanyuk-signup-box .seperator label, .jalanyuk-login-box .seperator label {
       display: block;
       font-size: 0.9167em;
       position: absolute;
@@ -6068,33 +6068,33 @@ ul.menu.mini {
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       font-weight: 400; }
-  .travelo-signup-box p, .travelo-login-box p {
+  .jalanyuk-signup-box p, .jalanyuk-login-box p {
     margin-bottom: 0; }
-  .travelo-signup-box .description, .travelo-login-box .description {
+  .jalanyuk-signup-box .description, .jalanyuk-login-box .description {
     font-size: 1em;
     color: #9e9e9e; }
-  .travelo-signup-box .form-group, .travelo-login-box .form-group {
+  .jalanyuk-signup-box .form-group, .jalanyuk-login-box .form-group {
     margin-bottom: 10px;
     text-align: left; }
-  .travelo-signup-box .checkbox label, .travelo-login-box .checkbox label {
+  .jalanyuk-signup-box .checkbox label, .jalanyuk-login-box .checkbox label {
     font-size: 1em; }
-  .travelo-signup-box .goto-login, .travelo-signup-box .goto-signup, .travelo-signup-box .signup-email, .travelo-login-box .goto-login, .travelo-login-box .goto-signup, .travelo-login-box .signup-email {
+  .jalanyuk-signup-box .goto-login, .jalanyuk-signup-box .goto-signup, .jalanyuk-signup-box .signup-email, .jalanyuk-login-box .goto-login, .jalanyuk-login-box .goto-signup, .jalanyuk-login-box .signup-email {
     color: #9f60b5;
     font-size: 1.0833em; }
 
-.travelo-signup-box .signup-email-section {
+.jalanyuk-signup-box .signup-email-section {
   margin-bottom: 10px; }
-.travelo-signup-box .signup-email i {
+.jalanyuk-signup-box .signup-email i {
   font-size: 1.2em;
   margin-right: 4px; }
-.travelo-signup-box .email-signup {
+.jalanyuk-signup-box .email-signup {
   margin-top: 5px;
   margin-bottom: 20px;
   display: none; }
 
-.travelo-login-box .checkbox-inline {
+.jalanyuk-login-box .checkbox-inline {
   margin-left: 0; }
-.travelo-login-box .forgot-password {
+.jalanyuk-login-box .forgot-password {
   color: #9f60b5;
   text-decoration: underline; }
 
@@ -7495,7 +7495,7 @@ ul.search-tabs {
   font-size: 0.8333em; }
   #flight-details .term-description dt, #flight-details .term-description dd, #car-details .term-description dt, #car-details .term-description dd {
     line-height: 1.1667em; }
-#flight-details .travelo-box, #car-details .travelo-box {
+#flight-details .jalanyuk-box, #car-details .jalanyuk-box {
   padding: 25px 25px 20px 25px;
   margin: 0; }
 
@@ -7715,7 +7715,7 @@ ul.search-tabs {
 #cruise-description .intro li {
   line-height: 2.5em; }
 
-.cruise-itinerary .travelo-box {
+.cruise-itinerary .jalanyuk-box {
   margin: 0; }
 .cruise-itinerary table {
   width: 100%; }
@@ -8658,15 +8658,15 @@ button.ui-button::-moz-focus-inner {
   .mobile-section .image-wrapper img {
     max-width: 100%; }
 
-.travelo-process {
+.jalanyuk-process {
   display: inline-block;
   position: relative;
   padding: 0 !important;
   float: none !important; }
-  .travelo-process img {
+  .jalanyuk-process img {
     max-width: 100%;
     margin-bottom: 2px; }
-  .travelo-process .process {
+  .jalanyuk-process .process {
     display: inline-block;
     position: absolute;
     /*table-layout: fixed;*/
@@ -8674,44 +8674,44 @@ button.ui-button::-moz-focus-inner {
     margin-top: -32.4px;
     margin-left: -32.4px;
     margin-right: -32.4px; }
-    .travelo-process .process .icon-wrapper {
+    .jalanyuk-process .process .icon-wrapper {
       vertical-align: top; }
-      .travelo-process .process .icon-wrapper i {
+      .jalanyuk-process .process .icon-wrapper i {
         display: block;
         font-size: 36px; }
-    .travelo-process .process .details {
+    .jalanyuk-process .process .details {
       min-width: 250px;
       width: 100%; }
-    .travelo-process .process.first {
+    .jalanyuk-process .process.first {
       top: 14.6446%;
       right: 85.3554%;
       margin-left: 0;
       text-align: right; }
-      .travelo-process .process.first .details {
+      .jalanyuk-process .process.first .details {
         padding-right: 8%;
         padding-left: 0; }
-    .travelo-process .process.second {
+    .jalanyuk-process .process.second {
       top: 14.6446%;
       left: 85.3554%;
       margin-right: 0;
       text-align: left; }
-      .travelo-process .process.second .details {
+      .jalanyuk-process .process.second .details {
         padding-left: 8%;
         padding-right: 0; }
-    .travelo-process .process.third {
+    .jalanyuk-process .process.third {
       top: 85.3554%;
       left: 85.3554%;
       margin-right: 0;
       text-align: left; }
-      .travelo-process .process.third .details {
+      .jalanyuk-process .process.third .details {
         padding-left: 8%;
         padding-right: 0; }
-    .travelo-process .process.forth {
+    .jalanyuk-process .process.forth {
       top: 85.3554%;
       right: 85.3554%;
       margin-left: 0;
       text-align: right; }
-      .travelo-process .process.forth .details {
+      .jalanyuk-process .process.forth .details {
         padding-right: 8%;
         padding-left: 0; }
 
@@ -8738,18 +8738,18 @@ button.ui-button::-moz-focus-inner {
   -webkit-transition: opacity 0.25s ease-in;
   -ms-transition: opacity 0.25s ease-in;
   transition: opacity 0.25s ease-in; }
-.investor-list .travelo-box {
+.investor-list .jalanyuk-box {
   height: 100px;
   display: table;
   width: 100%;
   table-layout: fixed;
   padding: 0 10px; }
-  .investor-list .travelo-box > a {
+  .investor-list .jalanyuk-box > a {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     overflow: hidden; }
-    .investor-list .travelo-box > a:hover > img {
+    .investor-list .jalanyuk-box > a:hover > img {
       -webkit-filter: none;
       filter: none;
       -o-filter: none;
@@ -8915,22 +8915,22 @@ button.ui-button::-moz-focus-inner {
       padding-right: 20px; }
 
 /* 9.2.5. Contact us page */
-.travelo-google-map {
+.jalanyuk-google-map {
   height: 255px; }
-  .travelo-google-map.full-box {
+  .jalanyuk-google-map.full-box {
     height: 400px; }
 
 .contact-form label {
   font-size: 0.8333em;
   margin-bottom: 3px; }
 
-/* 9.2.6. Travelo polices page */
-.travelo-policies.style1 ul.tabs {
+/* 9.2.6. jalanyuk polices page */
+.jalanyuk-policies.style1 ul.tabs {
   border-bottom: none; }
-.travelo-policies.style1 hr {
+.jalanyuk-policies.style1 hr {
   margin: 20px -20px; }
 
-.travelo-policies .policy {
+.jalanyuk-policies .policy {
   padding: 0 10px;
   margin: 40px 0; }
 

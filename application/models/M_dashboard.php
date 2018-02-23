@@ -31,6 +31,35 @@ class M_dashboard extends CI_Model{
 		$this->db->update('pelanggan', $data);
 	}
 
+	// DATA ADMIN
+
+	function tampil_data_admin()
+	{
+		return $this->db->get('admin');
+	}
+
+	function tambah_data_admin($data, $admin)
+	{
+		$this->db->insert('admin', $data);
+	}
+
+	function hapus_data_admin($where, $admin)
+	{
+		$this->db->where($where);
+		$this->db->delete('admin');
+	}
+
+	function edit_data_admin($where, $admin)
+	{
+		return $this->db->get_where('admin', $where);
+	}
+
+	function update_data_admin($where, $data, $admin)
+	{
+		$this->db->where($where);
+		$this->db->update('admin', $data);
+	}
+
 	// DATA USER
 
 	function tampil_data_pelanggan()
@@ -58,6 +87,35 @@ class M_dashboard extends CI_Model{
 	{
 		$this->db->where($where);
 		$this->db->update('user', $data);
+	}
+
+	// DATA BANDARA
+
+	function tampil_data_bandara()
+	{
+		return $this->db->get('bandara');
+	}
+
+	function tambah_data_bandara($data, $bandara)
+	{
+		$this->db->insert('bandara', $data);
+	}
+
+	function hapus_data_bandara($where, $bandara)
+	{
+		$this->db->where($where);
+		$this->db->delete('bandara');
+	}
+
+	function edit_data_bandara($where, $bandara)
+	{
+		return $this->db->get_where('bandara', $where);
+	}
+
+	function update_data_bandara($where, $data, $bandara)
+	{
+		$this->db->where($where);
+		$this->db->update('bandara', $data);
 	}
 
 	// DATA MASKAPAI
@@ -118,7 +176,7 @@ class M_dashboard extends CI_Model{
 		$this->db->update('pesawat', $data);
 	}
 
-	// DATA PESAWAT
+	// RUTE MASKAPAI
 
 	function tampil_rute_maskapai()
 	{
@@ -149,9 +207,20 @@ class M_dashboard extends CI_Model{
 
 	// DETAIL USER
 
-	function tampil_detail_user()
+	function tampil_admin()
 	{
-		return $this->db->get('pelanggan');
+		return $this->db->get('admin');
+	}
+
+	function edit_admin($where, $admin)
+	{
+		return $this->db->get_where('admin', $where);
+	}
+
+	function update_admin($where, $data, $admin)
+	{
+		$this->db->where($where);
+		$this->db->update('admin', $data);
 	}
 
 }

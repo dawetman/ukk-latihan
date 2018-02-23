@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/dist/components/revolution_slider/css/style.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/dist/components/jquery.bxslider/jquery.bxslider.css" media="screen" />
     <link id="main-style" rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/dist/components/flexslider/flexslider.css" media="screen" />
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/custom.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/updates.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/responsive.css">
@@ -22,7 +23,7 @@
 <body>
     <div id="page-wrapper">
         <header id="header" class="navbar-static-top">
-            
+
             <div class="main-header">
 
                 <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
@@ -32,7 +33,7 @@
                 <div class="container">
 
                     <h1 class="logo navbar-brand">
-                        <a href="<?php echo base_url() ?>Home" title="Travelo - home">
+                        <a href="<?php echo base_url() ?>Home" title="jalanyuk - home">
                             <img src="<?php echo base_url() ?>assets/dist/images/logo.png" alt="JalanYuk! Logo" />
                         </a>
                     </h1>
@@ -40,13 +41,13 @@
                     <nav id="main-menu" role="navigation">
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="<?php echo base_url() ?>Home">Home</a>
+                                <a href="<?php echo base_url() ?>Home">Halaman Utama</a>
                             </li>
                             <li class="menu-item">
-                                <a href="index.html">About</a>
+                                <a href="<?php echo base_url() ?>Home/blog">Blog</a>
                             </li>
                             <li class="menu-item">
-                                <a href="index.html">Contact</a>
+                                <a href="<?php echo base_url() ?>Home/about">Tentang Kami</a>
                             </li>
                         </ul>
                     </nav>
@@ -77,8 +78,30 @@
                     <i class="soap-icon-plane-right takeoff-effect"></i>
                     <h2 class="entry-title">Sebelum Anda Terbang</h2>
                 </div>
-                <a href="<?php echo base_url() ?>Login"><button class="btn-medium dark-blue1">MASUK</button></a>
+                <a href="#jalanyuk-login" class="soap-popupbox"><button class="btn-medium dark-blue1">MASUK</button></a>
+                <div id="jalanyuk-login" class="jalanyuk-login-box jalanyuk-box">
+                    <form class="login-form">
+                        <div class="text-center box"><h2>Masuk</h2></div>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" class="input-text full-width" placeholder="">
+                        </div>
+                        <label>Password</label>
+                        <div class="form-group">
+                            <input type="password" class="input-text full-width" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox checkbox-inline">
+                                <label>
+                                    <input type="checkbox"> Ingat informasi login
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-large full-width yellow">MASUK</button>
+                    </form>
+                    <div class="seperator"></div>
+                    <p>Belum punya akun? <a href="" class="">Daftar</a></p>
+                </div>
             </div>
         </div>
 
-    

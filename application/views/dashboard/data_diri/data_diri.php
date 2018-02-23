@@ -1,16 +1,15 @@
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
-      Data User
+      Data Diri
     </h1>
   </section>
 
   <section class="content">
-    <div class="col-xs-12">
       <div class="box">
 
         <div class="box-header">
-          <h3 class="box-title">Data User</h3>
+          <h3 class="box-title">Data Diri</h3>
           <div class="box-tools">
             <div class="input-group input-group-sm" style="width: 150px;">
               <input name="table_search" class="form-control pull-right" placeholder="Search" type="text">
@@ -25,20 +24,24 @@
           <table class="table">
             <tbody><tr>
               <th>Email</th>
-              <th>Username</th>
-              <th>Password</th>
+              <th>Nama</th>
+              <th>Gender</th>
+              <th>Alamat</th>
+              <th>Np. Telepon</th>
               <th>Aksi</th>
             </tr>
-            <?php foreach($user as $u) { ?>
+            <?php foreach($pelanggan as $p) { ?>
             <tr>
-              <td class="col col-md-3"><?php echo $u->email ?></td>
-              <td class="col col-md-3"><?php echo $u->username ?></td>
-              <td class="col col-md-2"><?php echo $u->password ?></td>
-              <td class="col col-md-1">
-                <a href="<?php echo base_url('Dashboard/v_edit_data_pelanggan/').$u->id;?>">
+              <td class="col col-md-2"><?php echo $p->email ?></td>
+              <td class="col col-md-2"><?php echo $p->name ?></td>
+              <td class="col col-md-1"><?php echo $p->gender ?></td>
+              <td class="col col-md-2"><?php echo $p->address ?></td>
+              <td class="col col-md-1"><?php echo $p->phone ?></td>
+              <td class="col col-md-1 pull-middle">
+                <a href="<?php echo base_url('User/v_edit_data_diri/').$p->id_pelanggan;?>">
                   <button class="btn btn-xs btn-warning">Edit</button>
                 </a>
-                <a href="<?php echo base_url('Dashboard/hapus_data_pelanggan/').$u->id;?>">
+                <a href="<?php echo base_url('User/hapus_data_diri/').$p->id_pelanggan;?>">
                   <button class="btn btn-xs btn-danger">Hapus</button></a>
                 </td>
               </tr>
@@ -47,10 +50,9 @@
           </table>
         </div>
         <div class="box-footer">
-          <a href="<?php echo base_url() ?>Dashboard/v_tambah_data_pelanggan"><button class="btn bg-gray pull-right">Tambah Data</button></a>
+          <a href="<?php echo base_url() ?>User/v_tambah_data_diri"><button class="btn bg-gray pull-right">Tambah Data</button></a>
         </div>
 
       </div>
-    </div>
   </section>
 </div>

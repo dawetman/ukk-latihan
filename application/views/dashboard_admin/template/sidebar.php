@@ -24,6 +24,9 @@
 				</a>
 				<ul class="treeview-menu">
 					<li>
+						<a href="<?php echo base_url() ?>Dashboard/v_data_bandara"><i class="fa"></i>Data Bandara</a>
+					</li>
+					<li>
 						<a href="<?php echo base_url() ?>Dashboard/v_data_maskapai"><i class="fa"></i>Data Maskapai</a>
 					</li>
 					<li>
@@ -47,8 +50,13 @@
 			</li>
 			<li class="header text-center">Navigasi Akun</li>
 			<li>
-				<a href="<?php echo base_url() ?>Dashboard/v_detail_user">
+				<a href="<?php echo base_url() ?>Dashboard/v_admin">
 					<i class="fa fa-info-circle"></i> <span>Detail Akun</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo base_url() ?>Dashboard/v_pesan">
+					<i class="fa fa-info-circle"></i> <span>Pesan Masuk</span>
 				</a>
 			</li>
 			<li>

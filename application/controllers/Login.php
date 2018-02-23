@@ -6,14 +6,12 @@ class Login extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('M_login');
+		$this->load->model(array('M_login'));
 	}
 
 	public function index()
 	{
-		$this->load->view('home/template/header');
 		$this->load->view('home/login');
-		$this->load->view('home/template/footer');
 	}
 
 	public function signup()
@@ -28,25 +26,29 @@ class Login extends CI_Controller {
 		$this->load->view('home/login_admin');
 	}
 
-	public function auth()
+	public function admin_auth()
 	{
-		$data_login=array
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$where = array
 		(
-			'username' => $this->input->post('username'),
-			'password' => md5($this->input->post('password'))
+			'username' => $username,
+			'password' => md5($password)
 		);
-		$data=$this->M_login->login($data_login['username'], $data_login['password']);
-
-		if ($data)
+		$cek = $this->M_login->admin_auth('admin',$where)->num_rows();
+		if($cek > 0)
 		{
-			$this->session->set_userdata('id', $data['id']);
-			$this->session->set_userdata('username', $data['username']);
-			$this->session->set_userdata('level', $data['level']);
-			redirect('User','refresh');
-		}
+			$data_session = array
+			(
+				'username' => $username,
+				'status' => "login"
+			);
+			$this->session->set_userdata($data_session);
+			redirect(base_url('Login/admin'));
+		} 
 		else
 		{
-			echo("Username atau password anda salah!");
+			echo "Username atau password salah!";
 		}
 	}
 
@@ -55,5 +57,5 @@ class Login extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('Home','refresh');
 	}
-	
+
 }

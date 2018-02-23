@@ -21,7 +21,7 @@
 
   <div class="wrapper">
     <header class="main-header">
-      <a href="<?php echo base_url() ?>User" class="logo">
+      <a href="<?php echo base_url() ?>Dashboard" class="logo">
         <span class="logo-lg">
           <img src="<?php echo base_url() ?>assets/dist/images/logo_small.png" alt="JalanYuk! Logo">
         </span>
