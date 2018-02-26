@@ -1,3 +1,15 @@
+<div class="page-title-container">
+    <div class="container yellow">
+        <div class="page-title pull-left">
+            <h2 class="entry-title">Tentang Kami</h2>
+        </div>
+        <ul class="breadcrumbs pull-right">
+            <li><a href="#">HOME</a></li>
+            <li class="active">Tentang Kami</li>
+        </ul>
+    </div>
+</div>
+
 <section id="content">
     <div class="container">
         <div id="main">
@@ -57,10 +69,10 @@
                     </div>
                 </div>
             </div>
-            <div class="travelo-box box-full">
+            <div class="jalanyuk-box box-full">
                 <div class="contact-form">
                     <h2>Kritik, Saran, dan Pesan</h2>
-                    <form action="contact-us-handler.php" method="post">
+                    <form action="<?php echo base_url() ?>Dashboard/tambah_pesan" method="post">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
@@ -85,7 +97,7 @@
                         </div>
 
                         <div class="col-sms-offset-6 col-sm-offset-6 col-md-offset-8 col-lg-offset-9">
-                            <button class="btn-medium full-width yellow">SEND MESSAGE</button>
+                            <button class="btn-medium full-width dark-blue1" type="submit">KIRIM PESAN</button>
                         </div>
                     </form>
                 </div>

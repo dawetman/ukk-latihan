@@ -3,70 +3,34 @@
     <div class="footer-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <h2>Discover</h2>
+                <div class="col-sm-6 col-md-4">
+                    <h2>Temukan</h2>
                     <ul class="discover triangle hover row">
-                        <li class="col-xs-6"><a href="#">Safety</a></li>
-                        <li class="col-xs-6"><a href="#">About</a></li>
-                        <li class="col-xs-6"><a href="#">Travelo Picks</a></li>
-                        <li class="col-xs-6"><a href="#">Latest Jobs</a></li>
-                        <li class="active col-xs-6"><a href="#">Mobile</a></li>
-                        <li class="col-xs-6"><a href="#">Press Releases</a></li>
-                        <li class="col-xs-6"><a href="#">Why Host</a></li>
-                        <li class="col-xs-6"><a href="#">Blog Posts</a></li>
-                        <li class="col-xs-6"><a href="#">Social Connect</a></li>
-                        <li class="col-xs-6"><a href="#">Help Topics</a></li>
-                        <li class="col-xs-6"><a href="#">Site Map</a></li>
-                        <li class="col-xs-6"><a href="#">Policies</a></li>
+                        <li class="active col-xs-6"><a href="#">Halaman Utama</a></li>
+                        <li class="col-xs-6"><a href="#">Blog</a></li>
+                        <li class="col-xs-6"><a href="#">Tentang Kami</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <h2>Travel News</h2>
-                    <ul class="travel-news">
-                        <li>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="http://placehold.it/63x63" alt="" width="63" height="63" />
-                                </a>
-                            </div>
-                            <div class="description">
-                                <h5 class="s-title"><a href="#">Amazing Places</a></h5>
-                                <p>Purus ac congue arcu cursus ut vitae pulvinar massaidp.</p>
-                                <span class="date">25 Sep, 2013</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="http://placehold.it/63x63" alt="" width="63" height="63" />
-                                </a>
-                            </div>
-                            <div class="description">
-                                <h5 class="s-title"><a href="#">Travel Insurance</a></h5>
-                                <p>Purus ac congue arcu cursus ut vitae pulvinar massaidp.</p>
-                                <span class="date">24 Sep, 2013</span>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="col-sm-6 col-md-2">
                 </div>
                 <div class="col-sm-6 col-md-3">
-                    <h2>Mailing List</h2>
-                    <p>Sign up for our mailing list to get latest updates and offers.</p>
+                    <h2>Berlangganan</h2>
+                    <p>Daftarkan email anda untuk segera berlangganan di JalanYuk! Travel</p>
                     <br />
-                    <div class="icon-check">
-                        <input type="text" class="input-text full-width" placeholder="your email" />
+                    <div class="icon-check color-yellow">
+                        <input type="text" class="input-text full-width" placeholder="email anda" />
                     </div>
                     <br />
-                    <span>We respect your privacy</span>
+                    <span>Kamu menghargai segala privasi anda.</span>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                    <h2>About Travelo</h2>
-                    <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque.</p>
+                    <h2>Butuh bantuan?</h2>
+                    <p>Kami dengan senang hati siap 24 jam dalam seminggu untuk melayani anda kapanpun dimanapun.</p>
                     <br />
                     <address class="contact-details">
-                        <span class="contact-phone"><i class="soap-icon-phone"></i> 1-800-123-HELLO</span>
-                        <br />
-                        <a href="#" class="contact-email">help@travelo.com</a>
+                        <span class="contact-phone"><i class="soap-icon-phone"></i> +62-8386-3445-645</span>
+                        <br>
+                        <a class="contact-email" href="#">jalanyuk@gmail.com</a>
                     </address>
                     <ul class="social-icons clearfix">
                         <li class="twitter"><a title="twitter" href="#" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
@@ -107,6 +71,7 @@
 <script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/dist/components/revolution_slider/js/jquery.themepunch.plugins.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/dist/components/revolution_slider/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/jquery.fitvids.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/dist/components/jquery.bxslider/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/dist/components/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/jquery.placeholder.js"></script>

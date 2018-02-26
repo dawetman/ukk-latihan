@@ -11,30 +11,47 @@
       <form role="form" action="<?php echo base_url() ?>Dashboard/tambah_rute_maskapai" method="POST">
         <div class="box-body">
           <div class="form-group">
-            <label>Nama Maskapai</label>
+            <label>Kode Rute</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-code"></i>
+              </span>
+              <input class="form-control" name="id_rute" type="text" placeholder="Kode Rute">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Kode Maskapai</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-plane"></i>
               </span>
-              <input class="form-control" name="name" type="text" placeholder="Nama Maskapai">
+              <input class="form-control" name="id_maskapai" type="text" placeholder="Kode Maskapai">
             </div>
           </div>
           <div class="form-group">
-            <label>Rute Asal</label>
+            <label>Bandara Asal</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-upload"></i>
               </span>
-              <input class="form-control" name="route_from" type="text" placeholder="Rute Asal">
+              <select class="form-control" name="id_route_from">
+                <?php foreach($data_rute as $data) { ?>
+                <option value="<?php echo $data->id_bandara ?>"><?php echo $data->id_bandara ?></option>
+                <?php } ?>
+              </select>
             </div>
           </div>
           <div class="form-group">
-            <label>Rute Tujuan</label>
+            <label>Bandara Tujuan</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-download"></i>
               </span>
-              <input class="form-control" name="route_to" type="text" placeholder="Rute Tujuan">
+              <select class="form-control" name="id_route_to">
+                <?php foreach($data_rute as $data) { ?>
+                <option value="<?php echo $data->id_bandara ?>"><?php echo $data->id_bandara ?></option>
+                <?php } ?>
+              </select>
             </div>
           </div>
           <div class="form-group">

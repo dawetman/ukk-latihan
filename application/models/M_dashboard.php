@@ -205,6 +205,14 @@ class M_dashboard extends CI_Model{
 		$this->db->update('rute', $data);
 	}
 
+	function data_rute()
+	{
+		$this->db->select('*');
+		$this->db->from('bandara');
+		$this->db->distinct('id_bandara');
+		return $this->db->get()->result();
+	}
+
 	// DETAIL USER
 
 	function tampil_admin()
@@ -221,6 +229,35 @@ class M_dashboard extends CI_Model{
 	{
 		$this->db->where($where);
 		$this->db->update('admin', $data);
+	}
+
+	// PESAN
+
+	function tampil_pesan()
+	{
+		return $this->db->get('pesan');
+	}
+
+	function tambah_pesan($data, $pesan)
+	{
+		$this->db->insert('pesan', $data);
+	}
+
+	function hapus_pesan($where, $pesan)
+	{
+		$this->db->where($where);
+		$this->db->delete('pesan');
+	}
+
+	function update_pesan($where, $data, $pesan)
+	{
+		$this->db->where($where);
+		$this->db->update('pesan', $data);
+	}
+
+	function edit_pesan($where, $pesan)
+	{
+		return $this->db->get_where('pesan', $where);
 	}
 
 }

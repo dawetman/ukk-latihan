@@ -27,15 +27,15 @@
                             <img src="<?php echo base_url() ?>assets/dist/images/logo.png" alt="JalanYuk! Logo" />
                         </a>
                     </h1>
-                    <div class="text-center box" style="font-size: 4em; font-weight: 400; line-height: 1em;">Login JalanYuk!</div>
+                    <div class="text-center box" style="font-size: 4em; font-weight: 400; line-height: 1em;">Masuk ke JalanYuk!</div>
                     <p class="light-blue-color block" style="font-size: 1.3333em;">Silahkan login terlebih dahulu.</p>
                     <div class="col-sm-8 col-md-6 col-lg-5 no-float no-padding center-block">
-                        <form class="login-form" action="<?php echo base_url(); ?>Login/admin_auth" method="post">
+                        <form class="login-form" action="<?php echo base_url(); ?>Login/auth_user" method="post">
                             <div class="form-group">
-                                <input type="text" class="input-text input-large full-width" placeholder="Username">
+                                <input type="text" name="username" class="input-text input-large full-width" placeholder="Username">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="input-text input-large full-width" placeholder="Password">
+                                <input type="password" name="password" class="input-text input-large full-width" placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <label class="checkbox">
@@ -44,13 +44,12 @@
                             </div>
                             <button type="submit" class="btn-large full-width yellow">MASUK</button>
                         </form>
+                        <div class="seperator"><br></div>
                         <div class="text-center">
                             <br>
                             <h5>
                                 Belum punya akun? 
-                                <a href="">
-                                    Daftar
-                                </a>
+                                <a href="<?php echo base_url() ?>Login/signup"><span class="skin-color">Daftar</span></a>
                             </h5>
                         </div>
                     </div>

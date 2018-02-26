@@ -23,23 +23,21 @@
       <div class="box-body table-responsive no-padding">
         <table class="table">
           <tbody><tr>
+            <th>Alias</th>
             <th>Email</th>
-            <th>Nama</th>
-            <th>Gender</th>
-            <th>Alamat</th>
-            <th>Np. Telepon</th>
+            <th>Nama Depan</th>
+            <th>Nama Belakang</th>
             <th>Aksi</th>
           </tr>
           <?php foreach($pelanggan as $p) { ?>
           <tr>
+            <td class="col col-md-2"><?php echo $p->alias ?></td>
             <td class="col col-md-2"><?php echo $p->email ?></td>
-            <td class="col col-md-2"><?php echo $p->name ?></td>
-            <td class="col col-md-1"><?php echo $p->gender ?></td>
-            <td class="col col-md-2"><?php echo $p->address ?></td>
-            <td class="col col-md-1"><?php echo $p->phone ?></td>
+            <td class="col col-md-2"><?php echo $p->name_f ?></td>
+            <td class="col col-md-2"><?php echo $p->name_b ?></td>
             <td class="col col-md-1 pull-middle">
-              <a href="<?php echo base_url('Dashboard/v_edit_detail_pelanggan/').$p->id_pelanggan;?>">
-                <button class="btn btn-xs btn-warning">Edit</button>
+              <a href="<?php echo base_url('Dashboard/v_more_detail_pelanggan/').$p->id_pelanggan;?>">
+                <button class="btn btn-xs btn-warning">Detail</button>
               </a>
               <a href="<?php echo base_url('Dashboard/hapus_detail_pelanggan/').$p->id_pelanggan;?>">
                 <button class="btn btn-xs btn-danger">Hapus</button></a>

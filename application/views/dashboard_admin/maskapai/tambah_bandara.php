@@ -16,7 +16,7 @@
               <span class="input-group-addon">
                 <i class="fa fa-code"></i>
               </span>
-              <input class="form-control" name="code" type="text" placeholder="Kode Bandara">
+              <input class="form-control" name="id_bandara" type="text" placeholder="Kode Bandara">
             </div>
           </div>
           <div class="form-group">
@@ -32,9 +32,9 @@
             <label>Kota</label>
             <div class="input-group">
               <span class="input-group-addon">
-                <i class="fa fa-asterisk"></i>
+                <i class="fa fa-home"></i>
               </span>
-              <input class="form-control" name="city" type="text" placeholder="city">
+              <input class="form-control" name="city" type="text" placeholder="Kota">
             </div>
           </div>
           <div class="box-footer">

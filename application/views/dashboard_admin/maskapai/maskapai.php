@@ -23,17 +23,19 @@
       <div class="box-body table-responsive no-padding">
         <table class="table">
           <tbody><tr>
+            <th>Kode Maskapai</th>
             <th>Nama Maskapai</th>
-            <th>Data Kursi</th>
-            <th>Detail</th>
+            <th>Kode Pesawat</th>
+            <th>Kelas</th>
             <th>Aksi</th>
           </tr>
           <?php
           foreach($maskapai as $m) { ?>
           <tr>
+            <td class="col col-md-2"><?php echo $m->id_maskapai ?></td>
             <td class="col col-md-3"><?php echo $m->name ?></td>
-            <td class="col col-md-3"><?php echo $m->seat ?></td>
-            <td class="col col-md-2"><?php echo $m->detail ?></td>
+            <td class="col col-md-2"><?php echo $m->id_pesawat ?></td>
+            <td class="col col-md-2"><?php echo $m->class ?></td>
             <td class="col col-md-1">
               <a href="<?php echo base_url('Dashboard/v_edit_data_maskapai/').$m->id_maskapai;?>">
                 <button class="btn btn-xs btn-warning">Edit</button>

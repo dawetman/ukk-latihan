@@ -16,7 +16,7 @@
               <span class="input-group-addon">
                 <i class="fa fa-code"></i>
               </span>
-              <input class="form-control" name="code" type="text" placeholder="Kode Pesawat">
+              <input class="form-control" name="id_pesawat" type="text" placeholder="Kode Pesawat">
             </div>
           </div>
           <div class="form-group">

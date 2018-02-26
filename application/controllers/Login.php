@@ -16,9 +16,61 @@ class Login extends CI_Controller {
 
 	public function signup()
 	{
-		$this->load->view('home/template/header');
 		$this->load->view('home/signup');
-		$this->load->view('home/template/footer');
+	}
+
+	public function register()
+	{
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$password = md5($this->input->post('password'));
+
+		$data = array
+		(
+			'email' => $email,
+			'username' => $username,
+			'password' => $password
+		);
+
+		$username_check = $this->M_login->username_check($data['username']);
+
+		if ($username_check)
+		{
+			$this->M_login->register($data,'user');
+			redirect('Home','refresh');
+		}
+		else
+		{
+			$this->session->set_flashdata('error_msg', 'Username atau email sudah terdaftar!');
+			redirect('Login/signup','refresh');
+		}
+	}
+
+	public function register_modal()
+	{
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$password = md5($this->input->post('password'));
+
+		$data = array
+		(
+			'email' => $email,
+			'username' => $username,
+			'password' => $password
+		);
+
+		$username_check = $this->M_login->username_check($data['username']);
+
+		if ($username_check)
+		{
+			$this->M_login->register($data,'user');
+			redirect('Home','refresh');
+		}
+		else
+		{
+			$this->session->set_flashdata('error_msg', 'Username atau email sudah terdaftar!');
+			redirect('Home','refresh');
+		}
 	}
 
 	public function admin()
@@ -26,7 +78,7 @@ class Login extends CI_Controller {
 		$this->load->view('home/login_admin');
 	}
 
-	public function admin_auth()
+	public function auth_admin()
 	{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
@@ -35,17 +87,18 @@ class Login extends CI_Controller {
 			'username' => $username,
 			'password' => md5($password)
 		);
-		$cek = $this->M_login->admin_auth('admin',$where)->num_rows();
+		$cek = $this->M_login->auth_admin("admin",$where)->num_rows();
 		if($cek > 0)
 		{
-			$data_session = array
-			(
-				'username' => $username,
+
+			$data_session = array(
+				'nama' => $username,
 				'status' => "login"
 			);
+
 			$this->session->set_userdata($data_session);
-			redirect(base_url('Login/admin'));
-		} 
+			redirect(base_url("Dashboard"));
+		}
 		else
 		{
 			echo "Username atau password salah!";

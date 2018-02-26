@@ -27,96 +27,57 @@
 	<div class="search-box-wrapper">
 		<div class="search-box container">
 			<ul class="search-tabs clearfix">
-				<li class="active"><a href="#flights-tab" data-toggle="tab">Pesan Tiket Pesawat</a></li>
+				<li class="active"><a href="#flights-tab" data-toggle="tab">Cari Jadwal Pesawat</a></li>
 			</ul>
 			<div class="visible-mobile">
 				<ul id="mobile-search-tabs" class="search-tabs clearfix">
-					<li class="active"><a href="#flights-tab" data-toggle="tab">Pesan Tiket Pesawat</a></li>
+					<li class="active"><a href="#flights-tab" data-toggle="tab">Cari Jadwal Pesawat</a></li>
 				</ul>
 			</div>
 			<div class="search-tab-content">
-				<form action="flight-list-view.html" method="post">
+				<form action="<?php echo base_url() ?>Home/flight_search" method="get">
 					<div class="row">
-						<div class="col-md-4">
-							<h3 class="title">Kemana?</h3>
-							<div class="form-group">
-								<label>Pergi Dari</label>
-								<input type="text" class="input-text full-width" placeholder="nama kota" />
-							</div>
-							<div class="form-group">
-								<label>Untuk Ke</label>
-								<input type="text" class="input-text full-width" placeholder="nama kota" />
-							</div>
-						</div>
 
-						<div class="col-md-5">
-							<h3 class="title">Kapan?</h3>
-							<label>Berangkat Pada</label>
-							<div class="form-group row">
-								<div class="col-xs-6">
-									<div class="datepicker-wrap">
-										<input type="text" class="input-text full-width dark-blue1" placeholder="mm/dd/yy" />
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="selector">
-										<select class="full-width">
-											<option value="1">anytime</option>
-											<option value="2">morning</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<label>Datang Pada</label>
-							<div class="form-group row">
-								<div class="col-xs-6">
-									<div class="datepicker-wrap">
-										<input type="text" class="input-text full-width" placeholder="mm/dd/yy" />
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="selector">
-										<select class="full-width">
-											<option value="1">anytime</option>
-											<option value="2">morning</option>
-										</select>
-									</div>
+						<div class="col-md-3">
+							<div class="form-grou full-widthp">
+								<label>Darimana?</label>
+								<div class="selector">
+									<select class="full-width" name="id_route_from">
+										<?php foreach($route_from as $f) { ?>
+										<option value="<?php echo $f->id_route_from ?>"><?php echo $f->city ?></option>
+										<?php } ?>
+									</select>
 								</div>
 							</div>
 						</div>
 
 						<div class="col-md-3">
-							<h4 class="title">Berapa?</h4>
-							<div class="form-group row">
-								<div class="col-xs-6">
-									<label>Dewasa</label>
-									<div class="selector">
-										<select class="full-width">
-											<option value="">0</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<label>Anak-Anak</label>
-									<div class="selector">
-										<select class="full-width">
-											<option value="">0</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
-									</div>
+							<div class="form-grou full-widthp">
+								<label>Kemana?</label>
+								<div class="selector">
+									<select class="full-width" name="id_route_to">
+										<?php foreach($route_to as $t) { ?>
+										<option value="<?php echo $t->id_route_to ?>"><?php echo $t->city  ?></option>
+										<?php } ?>
+									</select>
 								</div>
 							</div>
+						</div>
+
+						<div class="col-md-3">
+							<label>Tanggal Berangkat</label>
+							<div class="form-group">
+								<div class="datepicker-wrap">
+									<input type="text" class="input-text full-width" placeholder="bulan / tanggal / tahun" />
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
 							<div class="form-group row">
 								<div class="col-xs-12 pull-right">
 									<label>&nbsp;</label>
-									<button class="full-width dark-blue1">PESAN SEKARANG >></button>
+									<button type="submit" class="full-width dark-blue1">CARI JADWAL >></button>
 								</div>
 							</div>
 						</div>
@@ -236,48 +197,48 @@
 				<div class="col-md-6">
 					<article class="box">
 						<figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1">
-							<a href="#" title=""><img src="" alt="" width="270" height="192" /></a>
+							<a href="<?php echo base_url() ?>Home/blog_post01" title=""><img src="" alt="" width="270" height="192" /></a>
 						</figure>
 						<div class="details">
 							<h4>Blog Post 1</h4>
 							<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
-							<a href="#" title="" class="button dark-blue1">Baca ></a>
+							<a href="<?php echo base_url() ?>Home/blog_post01" title="" class="button dark-blue1">Baca ></a>
 						</div>
 					</article>
 				</div>
 				<div class="col-md-6">
 					<article class="box">
 						<figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1" data-animation-delay="0.4">
-							<a href="#" title=""><img src="" alt="" width="270" height="192" /></a>
+							<a href="<?php echo base_url() ?>Home/blog_post02" title=""><img src="" alt="" width="270" height="192" /></a>
 						</figure>
 						<div class="details">
 							<h4>Blog Post 2</h4>
 							<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
-							<a href="#" title="" class="button dark-blue1">Baca ></a>
+							<a href="<?php echo base_url() ?>Home/blog_post02" title="" class="button dark-blue1">Baca ></a>
 						</div>
 					</article>
 				</div>
 				<div class="col-md-6">
 					<article class="box">
 						<figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1">
-							<a href="#" title=""><img src="" alt="" width="270" height="192" /></a>
+							<a href="<?php echo base_url() ?>Home/blog_post03" title=""><img src="" alt="" width="270" height="192" /></a>
 						</figure>
 						<div class="details">
 							<h4>Blog Post 3</h4>
 							<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
-							<a href="#" title="" class="button dark-blue1">Baca ></a>
+							<a href="<?php echo base_url() ?>Home/blog_post03" title="" class="button dark-blue1">Baca ></a>
 						</div>
 					</article>
 				</div>
 				<div class="col-md-6">
 					<article class="box">
 						<figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1" data-animation-delay="0.4">
-							<a href="#" title=""><img src="" alt="" width="270" height="192" /></a>
+							<a href="<?php echo base_url() ?>Home/blog_post04" title=""><img src="" alt="" width="270" height="192" /></a>
 						</figure>
 						<div class="details">
 							<h4>Blog Post 4</h4>
 							<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
-							<a href="#" title="" class="button dark-blue1">Baca ></a>
+							<a href="<?php echo base_url() ?>Home/blog_post04" title="" class="button dark-blue1">Baca ></a>
 						</div>
 					</article>
 				</div>

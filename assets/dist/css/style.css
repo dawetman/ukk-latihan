@@ -3692,7 +3692,7 @@ ul.check-circle li:before {
       display: block;
       width: 70px;
       float: left;
-      background: #01b7f2;
+      background: #55555555;
       line-height: 70px;
       color: #fff;
       font-size: 3em;
@@ -5016,7 +5016,7 @@ ul.check-circle li:before {
   /* 3.1.2. Header Styles */ }
   #header .topnav {
     height: 30px;
-    background: #01b7f2;
+    background: #2d3e52;
     width: 100%; }
     #header .topnav ul.quick-menu > li {
       float: left;
@@ -5075,7 +5075,7 @@ ul.check-circle li:before {
     #header .logo a {
       display: block; }
   #header .mobile-menu-toggle {
-    background: url(../images/icon/mobile-menu.png) no-repeat center center #01b7f2;
+    background: url(../images/icon/mobile-menu.png) no-repeat center center #2d3e52;
     padding: 0;
     margin: 0;
     height: 66px;
@@ -6143,7 +6143,7 @@ ul.menu.mini {
 /* 3.3. Page Title ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .page-title-container {
   height: 56px;
-  background: #2d3e52; }
+  background: #fdb714; }
   .page-title-container .page-title .entry-title {
     line-height: 56px;
     color: #fff;
@@ -6162,14 +6162,14 @@ ul.menu.mini {
         padding-right: 5px;
         color: #fff; }
         .page-title-container .breadcrumbs li a:hover {
-          color: #01b7f2; }
+          color: #2d3e52; }
       .page-title-container .breadcrumbs li:after {
         content: "/";
-        color: #5a7ca3; }
+        color: #fff; }
       .page-title-container .breadcrumbs li:last-child:after {
         content: ""; }
       .page-title-container .breadcrumbs li.active {
-        color: #fdb714; }
+        color: #fff; }
   .page-title-container.style1 {
     background: #dbdbdb;
     height: 66px;
@@ -8028,7 +8028,7 @@ ul.search-tabs {
 .dashboard #content, .post-404page #content, .soap-login-page #content {
   background: none; }
 .dashboard #footer .footer-wrapper, .post-404page #footer .footer-wrapper, .soap-login-page #footer .footer-wrapper {
-  padding-top: 40px;
+  padding-top: 22px;
   padding-bottom: 50px; }
   .dashboard #footer .footer-wrapper .copyright, .post-404page #footer .footer-wrapper .copyright, .soap-login-page #footer .footer-wrapper .copyright {
     margin: 0; }
@@ -8334,7 +8334,7 @@ button.ui-button::-moz-focus-inner {
 
 /* 8. Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #footer .footer-wrapper {
-  padding: 80px 0; }
+  padding: 40px 0; }
   #footer .footer-wrapper > .container > .row > div {
     margin-top: 20px; }
 #footer .discover li {

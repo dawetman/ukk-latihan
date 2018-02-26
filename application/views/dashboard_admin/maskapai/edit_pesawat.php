@@ -11,14 +11,13 @@
       <?php foreach($pesawat as $p) { ?>
       <form role="form" action="<?php echo base_url() ?>Dashboard/edit_data_pesawat" method="POST">
         <div class="box-body">
-          <input type="hidden" name="id_pesawat" value="<?php echo $p->id_pesawat ?>">
           <div class="form-group">
             <label>Kode Pesawat</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-code"></i>
               </span>
-              <input class="form-control" name="code" type="text" value="<?php echo $p->code ?>">
+              <input class="form-control" name='id_pesawat' type="text" value="<?php echo $p->id_pesawat ?>" readonly>
             </div>
           </div>
           <div class="form-group">

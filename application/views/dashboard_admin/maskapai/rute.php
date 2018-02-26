@@ -23,9 +23,10 @@
       <div class="box-body table-responsive no-padding">
         <table class="table">
           <tbody><tr>
-            <th>Nama Maskapai</th>
-            <th>Rute Asal</th>
-            <th>Rute Tujuan</th>
+            <th>Kode Rute</th>
+            <th>Kode Maskapai</th>
+            <th>Bandara Asal</th>
+            <th>Bandara Tujuan</th>
             <th>Keberangkatan</th>
             <th>Kedatangan</th>
             <th>Harga</th>
@@ -33,11 +34,12 @@
           </tr>
           <?php foreach($rute as $r) { ?>
           <tr>
-            <td class="col col-md-2"><?php echo $r->name ?></td>
-            <td class="col col-md-2"><?php echo $r->route_from ?></td>
-            <td class="col col-md-2"><?php echo $r->route_to ?></td>
-            <td class="col col-md-2"><?php echo $r->departure ?></td>
-            <td class="col col-md-2"><?php echo $r->arrival ?></td>
+            <td class="col col-md-2"><?php echo $r->id_rute ?></td>
+            <td class="col col-md-2"><?php echo $r->id_maskapai ?></td>
+            <td class="col col-md-2"><?php echo $r->id_route_from ?></td>
+            <td class="col col-md-2"><?php echo $r->id_route_to ?></td>
+            <td class="col col-md-1"><?php echo $r->departure ?></td>
+            <td class="col col-md-1"><?php echo $r->arrival ?></td>
             <td class="col col-md-1"><?php echo $r->price ?></td>
             <td class="col col-md-3 text-center">
               <a href="<?php echo base_url('Dashboard/v_edit_rute_maskapai/').$r->id_rute;?>">

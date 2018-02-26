@@ -30,7 +30,7 @@
           </tr>
           <?php foreach($pesawat as $p) { ?>
           <tr>
-            <td class="col col-md-3"><?php echo $p->code ?></td>
+            <td class="col col-md-3"><?php echo $p->id_pesawat ?></td>
             <td class="col col-md-3"><?php echo $p->name ?></td>
             <td class="col col-md-2"><?php echo $p->detail ?></td>
             <td class="col col-md-1">

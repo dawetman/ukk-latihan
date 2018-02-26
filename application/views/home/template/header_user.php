@@ -26,11 +26,9 @@
             <div class="topnav hidden-xs">
                 <div class="container">
                     <ul class="quick-menu pull-left">
-                        <li><a href="#">Akun Saya</a></li>
+                        <li><a href="#">AKUN SAYA</a></li>
                     </ul>
                     <ul class="quick-menu pull-right">
-                        <li><a href="<?php echo base_url() ?>Login">Masuk</a></li>
-                        <li><a href="<?php echo base_url() ?>Login/signup">Daftar</a></li>
                         <li><a href="">KELUAR</a></li>
                     </ul>
                 </div>

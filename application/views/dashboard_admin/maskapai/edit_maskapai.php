@@ -11,32 +11,40 @@
       <?php foreach($maskapai as $m) { ?>
       <form role="form" action="<?php echo base_url() ?>Dashboard/edit_data_maskapai" method="POST">
         <div class="box-body">
-          <input type="hidden" name="id_maskapai" value="<?php echo $m->id_maskapai ?>">
           <div class="form-group">
-            <label>Nama Maskapai</label>
+            <label>Kode Maskapai</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-plane"></i>
               </span>
-              <input class="form-control" name="name" type="text" value="<?php echo $m->name ?>">
+              <input class="form-control" name="name" type="text" value="<?php echo $m->id_maskapai ?>" readonly>
             </div>
           </div>
           <div class="form-group">
-            <label>Kursi</label>
+            <label>Nama Maskapai</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-wheelchair"></i>
               </span>
-              <input class="form-control" name="seat" type="text" value="<?php echo $m->seat ?>">
+              <input class="form-control" name="seat" type="text" value="<?php echo $m->name ?>">
             </div>
           </div>
           <div class="form-group">
-            <label>Detail</label>
+            <label>Kode Pesawat</label>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-asterisk"></i>
               </span>
-              <input class="form-control" name="detail" type="text" value="<?php echo $m->detail ?>">
+              <input class="form-control" name="detail" type="text" value="<?php echo $m->id_pesawat ?>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Kelas</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-asterisk"></i>
+              </span>
+              <input class="form-control" name="class" type="text" value="<?php echo $m->class ?>">
             </div>
           </div>
           <div class="box-footer pull-right">

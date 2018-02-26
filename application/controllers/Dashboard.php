@@ -8,6 +8,11 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->helper(array('url'));
 		$this->load->model('M_dashboard');
+
+		if($this->session->userdata('status') != "login")
+		{
+			redirect(base_url("Home"));
+		}
 	}
 
 	public function index()
@@ -29,6 +34,16 @@ class Dashboard extends CI_Controller {
 		$this->load->view('dashboard_admin/template/footer');
 	}
 
+	public function v_more_detail_pelanggan($id_pelanggan)
+	{
+		$where = array('id_pelanggan' => $id_pelanggan);
+		$data['pelanggan'] = $this->M_dashboard->edit_detail_pelanggan($where, 'pelanggan')->result();
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/pelanggan/more_detail', $data);
+		$this->load->view('dashboard_admin/template/footer');
+	}
+
 	public function v_tambah_detail_pelanggan()
 	{
 		$this->load->view('dashboard_admin/template/header');
@@ -39,19 +54,31 @@ class Dashboard extends CI_Controller {
 
 	public function tambah_detail_pelanggan()
 	{
-		$name = $this->input->post('name');
+		$id_card = $this->input->post('id_card');
 		$email = $this->input->post('email');
+		$name_f = $this->input->post('name_f');
+		$name_b = $this->input->post('name_b');
 		$gender = $this->input->post('gender');
 		$address = $this->input->post('address');
 		$phone = $this->input->post('phone');
+		$city = $this->input->post('city');
+		$country = $this->input->post('country');
+		$zip = $this->input->post('zip');
+		$alias = $this->input->post('alias');
 
 		$data = array
 		(
-			'name' => $name,
+			'id_card' => $id_card,
 			'email' => $email,
+			'name_f' => $name_f,
+			'name_b' => $name_b,
 			'gender' => $gender,
 			'address' => $address,
-			'phone' => $phone
+			'phone' => $phone,
+			'city' => $city,
+			'country' => $country,
+			'zip' => $zip,
+			'alias' => $alias
 		);
 
 		$this->M_dashboard->tambah_detail_pelanggan($data,'pelanggan');
@@ -78,24 +105,36 @@ class Dashboard extends CI_Controller {
 	public function edit_detail_pelanggan()
 	{
 		$id_pelanggan = $this->input->post('id_pelanggan');
-		$name = $this->input->post('name');
+		$id_card = $this->input->post('id_card');
 		$email = $this->input->post('email');
+		$name_f = $this->input->post('name_f');
+		$name_b = $this->input->post('name_b');
 		$gender = $this->input->post('gender');
 		$address = $this->input->post('address');
 		$phone = $this->input->post('phone');
+		$city = $this->input->post('city');
+		$country = $this->input->post('country');
+		$zip = $this->input->post('zip');
+		$alias = $this->input->post('alias');
 
 		$data = array
 		(
-			'name' => $name,
+			'id_card' => $id_card,
 			'email' => $email,
+			'name_f' => $name_f,
+			'name_b' => $name_b,
 			'gender' => $gender,
 			'address' => $address,
-			'phone' => $phone
+			'phone' => $phone,
+			'city' => $city,
+			'country' => $country,
+			'zip' => $zip,
+			'alias' => $alias
 		);
 
 		$where = array('id_pelanggan' => $id_pelanggan);
 		$this->M_dashboard->update_detail_pelanggan($where,$data,'pelanggan');
-		redirect('Dashboard/v_detail_pelanggan');
+		redirect('Dashboard/v_detail_pelanggan/');
 	}
 
 	// DATA PELANGGAN
@@ -263,15 +302,17 @@ class Dashboard extends CI_Controller {
 
 	public function tambah_data_maskapai()
 	{
+		$id_maskapai = $this->input->post('id_maskapai');
 		$name = $this->input->post('name');
-		$seat = $this->input->post('seat');
-		$detail = $this->input->post('detail');
+		$id_pesawat = $this->input->post('id_pesawat');
+		$class = $this->input->post('class');
 
 		$data = array
 		(
+			'id_maskapai' => $id_maskapai,
 			'name' => $name,
-			'seat' => $seat,
-			'detail' => $detail
+			'id_pesawat' => $id_pesawat,
+			'class' => $class
 		);
 
 		$this->M_dashboard->tambah_data_maskapai($data,'maskapai');
@@ -299,14 +340,15 @@ class Dashboard extends CI_Controller {
 	{
 		$id_maskapai = $this->input->post('id_maskapai');
 		$name = $this->input->post('name');
-		$seat = $this->input->post('seat');
-		$detail = $this->input->post('detail');
+		$id_pesawat = $this->input->post('id_pesawat');
+		$class = $this->input->post('class');
 
 		$data = array
 		(
+			'id_maskapai' => $id_maskapai,
 			'name' => $name,
-			'seat' => $seat,
-			'detail' => $detail
+			'id_pesawat' => $id_pesawat,
+			'class' => $class
 		);
 
 		$where = array('id_maskapai' => $id_maskapai);
@@ -335,13 +377,13 @@ class Dashboard extends CI_Controller {
 
 	public function tambah_data_pesawat()
 	{
-		$code = $this->input->post('code');
+		$id_pesawat = $this->input->post('id_pesawat');
 		$name = $this->input->post('name');
 		$detail = $this->input->post('detail');
 
 		$data = array
 		(
-			'code' => $code,
+			'id_pesawat' => $id_pesawat,
 			'name' => $name,
 			'detail' => $detail
 		);
@@ -370,13 +412,12 @@ class Dashboard extends CI_Controller {
 	public function edit_data_pesawat()
 	{
 		$id_pesawat = $this->input->post('id_pesawat');
-		$code = $this->input->post('code');
 		$name = $this->input->post('name');
 		$detail = $this->input->post('detail');
 
 		$data = array
 		(
-			'code' => $code,
+			'id_pesawat' => $id_pesawat,
 			'name' => $name,
 			'detail' => $detail
 		);
@@ -399,17 +440,19 @@ class Dashboard extends CI_Controller {
 
 	public function v_tambah_rute_maskapai()
 	{
+		$data['data_rute'] = $this->M_dashboard->data_rute();
 		$this->load->view('dashboard_admin/template/header');
 		$this->load->view('dashboard_admin/template/sidebar');
-		$this->load->view('dashboard_admin/maskapai/tambah_rute');
+		$this->load->view('dashboard_admin/maskapai/tambah_rute',$data);
 		$this->load->view('dashboard_admin/template/footer');
 	}
 
 	public function tambah_rute_maskapai()
 	{
-		$name = $this->input->post('name');
-		$route_from = $this->input->post('route_from');
-		$route_to = $this->input->post('route_to');
+		$id_rute = $this->input->post('id_rute');
+		$id_maskapai = $this->input->post('id_maskapai');
+		$id_route_from = $this->input->post('id_route_from');
+		$id_route_to = $this->input->post('id_route_to');
 		$departure = $this->input->post('departure');
 		$arrival = $this->input->post('arrival');
 		$price = $this->input->post('price');
@@ -417,9 +460,10 @@ class Dashboard extends CI_Controller {
 
 		$data = array
 		(
-			'name' => $name,
-			'route_from' => $route_from,
-			'route_to' => $route_to,
+			'id_rute' => $id_rute,
+			'id_maskapai' => $id_maskapai,
+			'id_route_from' => $id_route_from,
+			'id_route_to' => $id_route_to,
 			'departure' => $departure,
 			'arrival' => $arrival,
 			'price' => $price
@@ -448,19 +492,21 @@ class Dashboard extends CI_Controller {
 
 	public function edit_rute_maskapai()
 	{
-		$id = $this->input->post('id_rute');
-		$name = $this->input->post('name');
-		$route_from = $this->input->post('route_from');
-		$route_to = $this->input->post('route_to');
+		$id_rute = $this->input->post('id_rute');
+		$id_maskapai = $this->input->post('id_maskapai');
+		$id_route_from = $this->input->post('id_route_from');
+		$id_route_to = $this->input->post('id_route_to');
 		$departure = $this->input->post('departure');
 		$arrival = $this->input->post('arrival');
 		$price = $this->input->post('price');
 
+
 		$data = array
 		(
-			'name' => $name,
-			'route_from' => $route_from,
-			'route_to' => $route_to,
+			'id_rute' => $id_rute,
+			'id_maskapai' => $id_maskapai,
+			'id_route_from' => $id_route_from,
+			'id_route_to' => $id_route_to,
 			'departure' => $departure,
 			'arrival' => $arrival,
 			'price' => $price
@@ -492,13 +538,13 @@ class Dashboard extends CI_Controller {
 
 	public function tambah_data_bandara()
 	{
-		$code = $this->input->post('code');
+		$id_bandara = $this->input->post('id_bandara');
 		$name = $this->input->post('name');
 		$city = $this->input->post('city');
 
 		$data = array
 		(
-			'code' => $code,
+			'id_bandara' => $id_bandara,
 			'name' => $name,
 			'city' => $city
 		);
@@ -527,13 +573,12 @@ class Dashboard extends CI_Controller {
 	public function edit_data_bandara()
 	{
 		$id_bandara = $this->input->post('id_bandara');
-		$code = $this->input->post('code');
 		$name = $this->input->post('name');
 		$city = $this->input->post('city');
 
 		$data = array
 		(
-			'code' => $code,
+			'id_bandara' => $id_bandara,
 			'name' => $name,
 			'city' => $city
 		);
@@ -581,6 +626,61 @@ class Dashboard extends CI_Controller {
 		$where = array('id_admin' => $id_admin);
 		$this->M_dashboard->update_admin($where,$data,'admin');
 		redirect('User/v_admin');
+	}
+
+	// PESAN
+
+	public function v_pesan()
+	{
+		$data['pesan'] = $this->M_dashboard->tampil_pesan()->result();
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/pesan/pesan', $data);
+		$this->load->view('dashboard_admin/template/footer');
+	}
+
+	public function v_more_pesan($id_pesan)
+	{
+		$where = array('id_pesan' => $id_pesan);
+		$data['pesan'] = $this->M_dashboard->edit_pesan($where, 'pesan')->result();
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/pesan/more_pesan', $data);
+		$this->load->view('dashboard_admin/template/footer');
+	}
+
+	public function v_tambah_pesan()
+	{
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/pesan/tambah_pesan');
+		$this->load->view('dashboard_admin/template/footer');
+	}
+
+	public function tambah_pesan()
+	{
+		$name = $this->input->post('name');
+		$email = $this->input->post('email');
+		$subject = $this->input->post('subject');
+		$message = $this->input->post('message');
+
+		$data = array
+		(
+			'name' => $name,
+			'email' => $email,
+			'subject' => $subject,
+			'message' => $message
+		);
+
+		$this->M_dashboard->tambah_pesan($data,'pesan');
+		redirect('Home/about');
+	}
+
+	public function hapus_pesan($id_pesan)
+	{
+		$where = array('id_pesan' => $id_pesan);
+		$this->M_dashboard->hapus_pesan($where,'pesan');
+		redirect('Dashboard/v_pesan');
 	}
 
 }
