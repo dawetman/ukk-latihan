@@ -26,13 +26,15 @@
             <th>Kode Pesawat</th>
             <th>Nama Pesawat</th>
             <th>Detail</th>
+            <th>Jumlah Kursi</th>
             <th>Aksi</th>
           </tr>
           <?php foreach($pesawat as $p) { ?>
           <tr>
-            <td class="col col-md-3"><?php echo $p->id_pesawat ?></td>
+            <td class="col col-md-2"><?php echo $p->id_pesawat ?></td>
             <td class="col col-md-3"><?php echo $p->name ?></td>
             <td class="col col-md-2"><?php echo $p->detail ?></td>
+            <td class="col col-md-2"><?php echo $p->seat ?></td>
             <td class="col col-md-1">
               <a href="<?php echo base_url('Dashboard/v_edit_data_pesawat/').$p->id_pesawat;?>">
                 <button class="btn btn-xs btn-warning">Edit</button>

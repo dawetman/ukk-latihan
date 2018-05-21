@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/adminlte/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/print.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/adminlte/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/adminlte/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/adminlte/bower_components/morris.js/morris.css">
@@ -21,7 +22,7 @@
 
   <div class="wrapper">
     <header class="main-header">
-      <a href="<?php echo base_url() ?>Dashboard" class="logo">
+      <a href="<?php echo base_url() ?>Home" class="logo">
         <span class="logo-lg">
           <img src="<?php echo base_url() ?>assets/dist/images/logo_small.png" alt="JalanYuk! Logo">
         </span>
@@ -39,7 +40,7 @@
           <ul class="nav navbar-nav">
             <li class="dropdown user user-menu">
               <a class="dropdown-toggle">
-                <span class="hidden-xs"><?php echo $this->session->userdata('username'); ?></span>
+                <span class=""><?php echo $this->session->userdata("name"); ?></span>
               </a>
             </li>
           </ul>

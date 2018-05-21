@@ -38,6 +38,15 @@
               <input class="form-control" name="detail" type="text" value="<?php echo $p->detail ?>">
             </div>
           </div>
+          <div class="form-group">
+            <label>Jumlah Kursi</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-wheelchair"></i>
+              </span>
+              <input class="form-control" name="detail" type="text" value="<?php echo $p->seat ?>">
+            </div>
+          </div>
           <div class="box-footer">
             <button type="submit" class="btn bg-gray">Simpan</button>
           </div>

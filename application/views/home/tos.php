@@ -53,7 +53,7 @@
 					<p>Jaminan uang kembali dalam 10 hari apabila anda mengalami masalah yang serius saat menggunakan jasa pemesanan kami.</p>
 				</div>
 				<div class="jalanyuk-box book-with-us-box">
-					<h4>Kenapa menggunakan JalanYuk!</h4>
+					<h4>Kenapa JalanYuk! Travel?</h4>
 					<ul>
 						<li>
 							<i class="soap-icon-savings circle"></i>

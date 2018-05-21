@@ -12,10 +12,10 @@
         <h3 class="box-title">Data User</h3>
       </div>
 
-      <?php foreach($user as $u) { ?>
+      <?php foreach ($user as $u) { ?>
       <form role="form">
         <div class="box-body">
-          <input type="hidden" name="id_user" value="<?php echo $u->id_user ?>">
+          <input type="hidden" name="id_admin" value="<?php echo $u->id_user ?>">
           <div class="form-group">
             <label>Email</label>
             <div class="input-group">

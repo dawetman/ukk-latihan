@@ -126,16 +126,17 @@
                   <span class="input-group-addon">
                     <i class="fa fa-flag"></i>
                   </span>
-                  <input class="form-control" name="country" type="text" value="<?php echo $p->country ?>">
+                  <select class="form-control" name="country">
+                    <option value="Indonesia">Indonesia</option>
+                  </select>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div class="box-footer">
-        <button type="submit" class="btn bg-gray pull-right">Simpan</button>
-      </div>
+          <button type="submit" class="btn bg-gray pull-right">Simpan</button>
+        </div>
       </form>
       <?php } ?>
     </div>

@@ -37,6 +37,15 @@
               <input class="form-control" name="detail" type="text" placeholder="Detail">
             </div>
           </div>
+          <div class="form-group">
+            <label>Jumlah Kursi</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-wheelchair"></i>
+              </span>
+              <input class="form-control" name="seat" type="text" placeholder="Jumlah Kursi">
+            </div>
+          </div>
           <div class="box-footer">
             <button type="submit" class="btn bg-gray">Submit</button>
           </div>

@@ -4,7 +4,7 @@
 		<ul class="sidebar-menu" data-widget="tree">
 			<li class="header text-center">Navigasi Utama</li>
 			<li>
-				<a>
+				<a href="<?php echo base_url() ?>User/v_reservasi">
 					<i class="fa fa-calendar"></i> <span>Reservasi</span>
 				</a>
 			</li>

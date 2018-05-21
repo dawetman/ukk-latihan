@@ -21,9 +21,14 @@ class M_login extends CI_Model {
 		}
 	}
 
-	function auth_admin($table,$where)
+	function auth_admin($table, $where)
 	{		
-		return $this->db->get_where($table,$where);
+		return $this->db->get_where('admin',$where);
+	}
+
+	function auth_user($table, $where)
+	{		
+		return $this->db->get_where('user',$where);
 	}
 
 }

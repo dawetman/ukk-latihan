@@ -12,7 +12,7 @@
         <h3 class="box-title">Data User</h3>
       </div>
 
-      <?php foreach($admin as $a) { ?>
+      <?php foreach ($admin as $a) { ?>
       <form role="form">
         <div class="box-body">
           <input type="hidden" name="id_admin" value="<?php echo $a->id_admin ?>">

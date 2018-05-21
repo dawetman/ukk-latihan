@@ -6,7 +6,7 @@
         </div>
         <a href="#jalanyuk-login" class="soap-popupbox"><button class="btn-medium dark-blue1">MASUK</button></a>
         <div id="jalanyuk-login" class="jalanyuk-login-box jalanyuk-box">
-            <form class="login-form">
+            <form class="login-form" action="<?php echo base_url(); ?>Login/auth_user" method="post">
                 <div class="text-center box"><h2>Masuk</h2></div>
                 <div class="form-group">
                     <label>Username</label>

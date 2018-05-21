@@ -4,9 +4,9 @@ class M_user extends CI_Model{
 
 	// DATA DIRI
 
-	function tampil_data_diri()
+	function tampil_data_diri($where)
 	{
-		return $this->db->get('pelanggan');
+		return $this->db->get_where('pelanggan', $where);
 	}
 
 	function tambah_data_diri($data, $pelanggan)
@@ -33,9 +33,9 @@ class M_user extends CI_Model{
 
 	// DETAIL
 
-	function tampil_user()
+	function tampil_user($where)
 	{
-		return $this->db->get('user');
+		return $this->db->get_where('user', $where);
 	}
 
 	function edit_user($where, $user)
@@ -47,6 +47,30 @@ class M_user extends CI_Model{
 	{
 		$this->db->where($where);
 		$this->db->update('user', $data);
+	}
+
+	// RESERVASI
+
+	function tampil_reservasi($where)
+	{
+		return $this->db->get_where('reservasi', $where);
+	}
+
+	function hapus_reservasi($where, $reservasi)
+	{
+		$this->db->where($where);
+		$this->db->delete('reservasi');
+	}
+
+	function edit_reservasi($where, $reservasi)
+	{
+		return $this->db->get_where('reservasi', $where);
+	}
+
+	function update_reservasi($where, $data, $reservasi)
+	{
+		$this->db->where($where);
+		$this->db->update('reservasi', $data);
 	}
 
 }

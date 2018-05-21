@@ -39,7 +39,7 @@
           <ul class="nav navbar-nav">
             <li class="dropdown user user-menu">
               <a class="dropdown-toggle">
-                <span class="hidden-xs"><?php echo $this->session->userdata('username'); ?></span>
+                <span class="hidden-xs"><?php echo $this->session->userdata('name'); ?></span>
               </a>
             </li>
           </ul>

@@ -39,7 +39,7 @@
 				</ul>
 			</li>
 			<li>
-				<a>
+				<a href="<?php echo base_url() ?>Dashboard/v_reservasi">
 					<i class="fa fa-calendar"></i> <span>Reservasi</span>
 				</a>
 			</li>

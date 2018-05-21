@@ -11,7 +11,7 @@
       <?php foreach($user as $u) { ?>
       <form role="form" action="<?php echo base_url() ?>User/edit_user" method="POST">
         <div class="box-body">
-          <input type="hidden" name="id_user" value="<?php echo $u->id_user ?>">
+          <input type="hidden" name="id_admin" value="<?php echo $u->id_user ?>">
           <div class="form-group">
             <label>Email</label>
             <div class="input-group">

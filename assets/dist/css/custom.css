@@ -1,4 +1,31 @@
-/*
- * Title:   Custom Style File
- * Author:  http://themeforest.net/user/soaptheme 
- */
+.btn-seat
+{
+	height: 10px;
+	width: 10px;
+	margin: 2px 2px;
+}
+
+.no-seat
+{
+	margin: 2px;
+	display: inline-block;
+	width: 26px;
+	text-align: center;
+	font-size: 80%;
+	color: #6c757d;
+}
+
+.margin-left-32
+{
+	margin-left: 32px;
+}
+
+.margin-top-10
+{
+	margin-top: 10px;
+}
+
+.margin-left-10
+{
+	margin-left: 10px;
+}

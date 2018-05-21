@@ -97,7 +97,7 @@
                         </div>
 
                         <div class="col-sms-offset-6 col-sm-offset-6 col-md-offset-8 col-lg-offset-9">
-                            <button class="btn-medium full-width dark-blue1" type="submit">KIRIM PESAN</button>
+                            <button class="btn-medium full-width yellow" type="submit">KIRIM PESAN</button>
                         </div>
                     </form>
                 </div>

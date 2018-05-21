@@ -2,7 +2,7 @@
 
 class M_dashboard extends CI_Model{
 
-	// DETAIL USER
+	// DETAIL PELANGGAN
 
 	function tampil_detail_pelanggan()
 	{
@@ -60,7 +60,7 @@ class M_dashboard extends CI_Model{
 		$this->db->update('admin', $data);
 	}
 
-	// DATA USER
+	// DATA PELANGGAN
 
 	function tampil_data_pelanggan()
 	{
@@ -215,9 +215,9 @@ class M_dashboard extends CI_Model{
 
 	// DETAIL USER
 
-	function tampil_admin()
+	function tampil_admin($where)
 	{
-		return $this->db->get('admin');
+		return $this->db->get_where('admin', $where);
 	}
 
 	function edit_admin($where, $admin)
@@ -258,6 +258,40 @@ class M_dashboard extends CI_Model{
 	function edit_pesan($where, $pesan)
 	{
 		return $this->db->get_where('pesan', $where);
+	}
+
+	// RESERVASI
+
+	function tampil_reservasi()
+	{
+		return $this->db->get('reservasi');
+	}
+
+	function more_reservasi($where)
+	{
+		$this->db->select('*');
+		$this->db->from('reservasi');
+		$this->db->where($where);
+		$this->db->join('booking', 'reservasi.id_reservasi = booking.id_reservasi');
+		$this->db->join('pelanggan', 'booking.id_pelanggan = pelanggan.id_pelanggan');
+		return $this->db->get()->result();
+	}
+
+	function hapus_reservasi($where, $reservasi)
+	{
+		$this->db->where($where);
+		$this->db->delete('reservasi');
+	}
+
+	function edit_reservasi($where, $reservasi)
+	{
+		return $this->db->get_where('reservasi', $where);
+	}
+
+	function update_reservasi($where, $data, $reservasi)
+	{
+		$this->db->where($where);
+		$this->db->update('reservasi', $data);
 	}
 
 }

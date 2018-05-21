@@ -53,7 +53,7 @@
 															<span><?php echo $detail->arrival ?></span>
 														</div>
 													</div>
-													<label class="layover">Durasi : 3h 50m</label>
+													<label class="layover">Durasi : 120 menit</label>
 												</div>
 											</div>
 										</div>
@@ -81,35 +81,82 @@
 						<img src="http://localhost/ukk/assets/dist/images/flight/<?php echo $detail->logo ?> " alt="">
 					</figure>
 					<div class="details">
-						<h2 class="box-title"><?php echo $detail_from->city ?> - <?php echo $detail_to->city ?><small><?php echo $detail->maskapai_name ?> - <?php echo $detail->maskapai_class ?></small></h2>
+						<h2 class="box-title"><?php echo $detail_from->city ?> - <?php echo $detail_to->city ?><small><?php echo $detail->maskapai_name ?> (<?php echo $detail->maskapai_class ?>)</small></h2>
 
 						<label>Tanggal berangkat</label>
-						<div class="form-group row">
-							<div class="col-xs-12">
-								<div class="datepicker-wrap">
-									<input type="text" class="input-text full-width dark-blue1" placeholder="bulan / tanggal / tahun" />
+
+						<?php if ($this->session->userdata('status') != null) { ?>
+						<form action="<?= base_url() ?>Home/flight_booking" method="post">
+						<?php } else { ?>
+						<form action="<?php echo base_url('Login/redirect/'); echo $id_rute?>" method="post">
+						<?php } ?>
+							<div class="form-group row">
+								<div class="col-xs-12">
+									<div class="datepicker-wrap">
+										<input type="text" class="input-text full-width dark-blue1" placeholder="bulan / tanggal / tahun" name="tanggal" required="" />
+									</div>
 								</div>
 							</div>
-						</div>
+							<div class="selector">
+								<select class="full-width" name="jumlah_tiket" onchange="select_handler(this)">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
+							<br/>
+							<span class="price clearfix">
+								<small class="pull-left">Harga Tiket</small>
+								<input type="hidden" id="input_harga" name="harga" value="<?php echo $detail->price ?>">
+								<span class="pull-right" id="harga" name="harga">
+									Rp. <?php echo $detail->price ?>
+								</span>
+							</span>
 
-						<span class="price clearfix">
-							<small class="pull-left">Harga Tiket</small>
-							<span class="pull-right">Rp. <?php echo $detail->price ?></span>
-						</span>
+							<div class="duration text-center">
+								<dl>
+									<dd>Sudah termasuk</dd>
+									<dt class="skin-color">PPN 10%</dt>
+								</dl>
+							</div>
 
-						<div class="duration text-center">
-							<dl>
-								<dd>Sudah termasuk</dd>
-								<dt class="skin-color">PPN 10%</dt>
-							</dl>
-						</div>
+							<input type="hidden" name="id_rute" value="<?= $id_rute ?>">
 
-
-						<a href="flight-booking.html" class="button dark-blue1 full-width uppercase btn-medium">book flight now</a>
+							<button type="submit" class="button dark-blue1 full-width uppercase btn-medium">Pesan Tiket</button>
+						</form>
 					</div>
-				</article>
-			</div>
-
+				</div>
+			</article>
 		</div>
+
 	</div>
+</div>
 </section>
+
+<script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	function select_handler(obj)
+	{
+		if (obj.value == "2")
+		{
+			$('#harga').text('Rp. '+<?php echo $detail->price ?>*2);
+			$('#input_harga').val(<?php echo $detail->price ?>*2);
+		}
+		else if (obj.value == "3")
+		{
+			$('#harga').text('Rp. '+<?php echo $detail->price ?>*3);
+			$('#input_harga').val(<?php echo $detail->price ?>*3);
+		}
+		else if (obj.value == "4")
+		{
+			$('#harga').text('Rp. '+<?php echo $detail->price ?>*4);
+			$('#input_harga').val(<?php echo $detail->price ?>*4);
+		}
+		else
+		{
+			$('#harga').text('Rp. '+<?php echo $detail->price ?>*1);
+			$('#input_harga').val(<?php echo $detail->price ?>*1);
+		}
+	}
+</script>

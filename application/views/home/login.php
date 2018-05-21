@@ -30,7 +30,8 @@
                     <div class="text-center box" style="font-size: 4em; font-weight: 400; line-height: 1em;">Masuk ke JalanYuk!</div>
                     <p class="light-blue-color block" style="font-size: 1.3333em;">Silahkan login terlebih dahulu.</p>
                     <div class="col-sm-8 col-md-6 col-lg-5 no-float no-padding center-block">
-                        <form class="login-form" action="<?php echo base_url(); ?>Login/auth_user" method="post">
+                        <?php (($redirect != "")?$url=base_url('Login/auth_user/').$redirect:$url=base_url('Login/auth_user'))?>
+                        <form class="login-form" action="<?php echo $url ?>" method="post">
                             <div class="form-group">
                                 <input type="text" name="username" class="input-text input-large full-width" placeholder="Username">
                             </div>

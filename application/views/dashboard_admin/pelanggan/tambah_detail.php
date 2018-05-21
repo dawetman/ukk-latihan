@@ -120,9 +120,11 @@
                 <label>Negara</label>
                 <div class="input-group">
                   <span class="input-group-addon">
-                    <i class="fa fa-envelope"></i>
+                    <i class="fa fa-flag"></i>
                   </span>
-                  <input class="form-control" name="country" type="text" placeholder="Negara">
+                  <select class="form-control" name="country">
+                    <option value="Indonesia">Indonesia</option>
+                  </select>
                 </div>
               </div>
             </div>

@@ -9,9 +9,9 @@ class Dashboard extends CI_Controller {
 		$this->load->helper(array('url'));
 		$this->load->model('M_dashboard');
 
-		if($this->session->userdata('status') != "login")
+		if($this->session->userdata('status') != "admin")
 		{
-			redirect(base_url("Home"));
+			redirect(base_url("Login/admin"));
 		}
 	}
 
@@ -232,7 +232,7 @@ class Dashboard extends CI_Controller {
 	{
 		$email = $this->input->post('email');
 		$username = $this->input->post('username');
-		$password = md5(md5($this->input->post('password')));
+		$password = md5($this->input->post('password'));
 
 		$data = array
 		(
@@ -592,7 +592,11 @@ class Dashboard extends CI_Controller {
 
 	public function v_admin()
 	{
-		$data['admin'] = $this->M_dashboard->tampil_admin()->result();
+		$where = array
+		(
+			'id_admin' => $this->session->userdata('id_admin')
+		);
+		$data['admin'] = $this->M_dashboard->tampil_admin($where)->result();
 		$this->load->view('dashboard_admin/template/header');
 		$this->load->view('dashboard_admin/template/sidebar');
 		$this->load->view('dashboard_admin/detail/admin', $data);
@@ -681,6 +685,58 @@ class Dashboard extends CI_Controller {
 		$where = array('id_pesan' => $id_pesan);
 		$this->M_dashboard->hapus_pesan($where,'pesan');
 		redirect('Dashboard/v_pesan');
+	}
+
+	// RESERVASI
+
+	public function v_reservasi()
+	{
+		$data['reservasi'] = $this->M_dashboard->tampil_reservasi()->result();
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/reservasi/reservasi', $data);
+		$this->load->view('dashboard_admin/template/footer');
+	}
+
+	public function v_more_reservasi($id_reservasi)
+	{
+		$where = array('reservasi.id_reservasi' => $id_reservasi);
+		$data['booking'] = $this->M_dashboard->more_reservasi($where);
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/reservasi/more_reservasi', $data);
+		$this->load->view('dashboard_admin/template/footer');
+	}
+	public function v_edit_reservasi($id_reservasi)
+	{
+		$where = array('id_reservasi' => $id_reservasi);
+		$data['reservasi'] = $this->M_dashboard->edit_reservasi($where, 'reservasi')->result();
+		$this->load->view('dashboard_admin/template/header');
+		$this->load->view('dashboard_admin/template/sidebar');
+		$this->load->view('dashboard_admin/reservasi/edit_reservasi', $data);
+		$this->load->view('dashboard_admin/template/footer');
+	}
+
+	public function hapus_reservasi($id_reservasi)
+	{
+		$where = array('id_reservasi' => $id_reservasi);
+		$this->M_dashboard->hapus_reservasi($where,'reservasi');
+		redirect('Dashboard/v_reservasi');
+	}
+
+	public function edit_reservasi()
+	{
+		$id_reservasi = $this->input->post('id_reservasi');
+		$status = $this->input->post('status');
+
+		$data = array
+		(
+			'status' => $status
+		);
+
+		$where = array('id_reservasi' => $id_reservasi);
+		$this->M_dashboard->update_reservasi($where,$data,'reservasi');
+		redirect('Dashboard/v_reservasi/');
 	}
 
 }
